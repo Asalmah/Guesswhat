@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Special Website</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 20%;
+            background-color: #f7f7f7;
+        }
+        .hidden {
+            display: none;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div id="page1">
+        <h1>Only Sarvin can access this website</h1>
+        <p>Make sure you are Sarvin!</p>
+        <button onclick="goToPage2()">Continue</button>
+    </div>
+    <div id="page2" class="hidden">
+        <h1>Guess what?</h1>
+        <button onclick="goToPage3()">Continue</button>
+    </div>
+    <div id="page3" class="hidden">
+        <h1>Gharare farda too jibet basham!</h1>
+    </div>
+
+    <script>
+        function goToPage2() {
+            document.getElementById('page1').classList.add('hidden');
+            document.getElementById('page2').classList.remove('hidden');
+        }
+
+        function goToPage3() {
+            document.getElementById('page2').classList.add('hidden');
+            document.getElementById('page3').classList.remove('hidden');
+        }
+    </script>
+</body>
+</html>
